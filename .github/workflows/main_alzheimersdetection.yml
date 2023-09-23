@@ -1,6 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+
 name: Build and deploy Python app to Azure Web App - AlzheimersDetection
 
 on:
@@ -15,11 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
 
       - name: Set up Python version
         uses: actions/setup-python@v1
@@ -64,4 +60,4 @@ jobs:
         with:
           app-name: 'AlzheimersDetection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA2079E749924ACB94F4C8C0ACFD18D9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1795C7036FFC4D18A4FB5B514C59227C }}
